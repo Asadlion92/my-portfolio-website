@@ -441,3 +441,33 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* DARK MODE BUTTON */
+
+.darkmode-icon {
+    cursor: pointer;
+    color: purple;
+}
+
+.lightmode-icon {
+    cursor: pointer;
+    color: yellow;
+}
+
+i.lightmode-icon {
+    display: none;
+}
+
+/* TRYING THIS OUT BELOW */
+
+.dark-theme {
+    background-color: black;
+}
+
+.dark-theme-font {
+    color: white;
+}
+
+.testing {
+    background-color: gray;
+}
