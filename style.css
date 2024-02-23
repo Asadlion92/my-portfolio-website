@@ -220,7 +220,7 @@ section {
 
 .icon {
     cursor: pointer;
-    height: 2rem;
+    font-size: 1.75rem;
 }
 
 /* BUTTONS */
@@ -294,6 +294,10 @@ section {
 
 .about-pic {
     border-radius: 2rem;
+}
+
+.about-icon {
+    cursor: default;
 }
 
 .arrow {
@@ -458,16 +462,10 @@ i.lightmode-icon {
     display: none;
 }
 
-/* TRYING THIS OUT BELOW */
-
 .dark-theme {
     background-color: black;
 }
 
 .dark-theme-font {
     color: white;
-}
-
-.testing {
-    background-color: gray;
 }

@@ -7,40 +7,41 @@ function toggleMenu() {
 
 // DARK MODE
 
-// OLD CODE
-
-function darkMode() {
-    const darkMode = document.querySelector("link");
-    darkMode.href = "/darkmode.css"
-}
-
-// NEW CODE
-
-const toggle = document.getElementById('toggleDark');
-const lightToggle = document.getElementById('toggleLight');
-const body = document.querySelector('body');
 const title = document.querySelectorAll('.title');
 const a = document.querySelectorAll('a');
-const logo = document.querySelector('.logo');
 const arrow = document.querySelectorAll('#arrow');
-const textContainer = document.querySelector('.text-container');
-
 const p = document.querySelectorAll('p');
 const detailsContainer = document.querySelectorAll(".details-container");
-console.log(detailsContainer)
-
-
-
-const contactInfoUpperContainer = document.querySelector('.contact-info-upper-container');
-
+const icon = document.querySelectorAll(".icon");
+const h3 = document.querySelectorAll("h3");
+const btn = document.querySelectorAll('button');
+const experienceSubTitle = document.querySelectorAll('.experience-sub-title');
 
 
 const toggleDarkLightMode = document.getElementById('toggleDarkLightMode');
+// const toggleDarkLightMode = document.querySelectorAll('toggleDarkLightMode');
 
 toggleDarkLightMode.onclick = () => {
-    document.body.classList.toggle("dark-theme");
+    //note for some reason, I couldn't define the logo variable outside and get it to work inside. So the code below works instead.
+
+    document.querySelector('body').classList.toggle('dark-theme')
+    document.querySelector('.logo').classList.toggle('dark-theme-font')
+    document.querySelector('.contact-info-upper-container').classList.toggle('dark-theme')
+
+    //adding and removing sun and moon icon
+    // document.querySelector('.darkmode-icon').style.display = 'none';
+    // document.querySelector('.lightmode-icon').style.display = 'inline-block';
 
     // We use forEach since the a is set to querySelectorAll
+
+    experienceSubTitle.forEach((e) => {
+        e.classList.toggle("dark-theme-font")
+    })
+
+    btn.forEach((e) => {
+        e.classList.toggle("dark-theme-font")
+    })
+
     a.forEach((e) => {
         e.classList.toggle("dark-theme-font")
     })
@@ -56,4 +57,13 @@ toggleDarkLightMode.onclick = () => {
     detailsContainer.forEach((e) => {
         e.classList.toggle("dark-theme")
     })
+
+    icon.forEach((e) => {
+        e.classList.toggle("dark-theme-font")
+    })
+
+    h3.forEach((e) => {
+        e.classList.toggle("dark-theme-font")
+    })
+
 }
