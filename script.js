@@ -16,23 +16,46 @@ const icon = document.querySelectorAll(".icon");
 const h3 = document.querySelectorAll("h3");
 const btn = document.querySelectorAll('button');
 const experienceSubTitle = document.querySelectorAll('.experience-sub-title');
+const logo = document.querySelectorAll('.logo');
+const moonIcon = document.querySelector('.fa-moon');
+const sunIcon = document.querySelector('.fa-sun');
+
+sunIcon.style.display = 'none'
+
+let hideIcon = false;
+
+const hamburgerIcon = document.querySelectorAll('span');
 
 
-const toggleDarkLightMode = document.getElementById('toggleDarkLightMode');
-// const toggleDarkLightMode = document.querySelectorAll('toggleDarkLightMode');
-
-toggleDarkLightMode.onclick = () => {
+const toggleDarkLightMode = () => {
     //note for some reason, I couldn't define the logo variable outside and get it to work inside. So the code below works instead.
 
     document.querySelector('body').classList.toggle('dark-theme')
-    document.querySelector('.logo').classList.toggle('dark-theme-font')
     document.querySelector('.contact-info-upper-container').classList.toggle('dark-theme')
 
-    //adding and removing sun and moon icon
-    // document.querySelector('.darkmode-icon').style.display = 'none';
-    // document.querySelector('.lightmode-icon').style.display = 'inline-block';
+    hideIcon = !hideIcon;
+
+    if (hideIcon) {
+        sunIcon.style.display = 'inline-block';
+        sunIcon.style.marginLeft = '-45px';
+        moonIcon.style.display = 'none';
+        hamburgerIcon.forEach((e) => {
+            e.style.backgroundColor = 'white'
+        })
+    } else {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline-block'
+        hamburgerIcon.forEach((e) => {
+            e.style.backgroundColor = 'black'
+        })
+    }
+
 
     // We use forEach since the a is set to querySelectorAll
+
+    logo.forEach((e) => {
+        e.classList.toggle('dark-theme-font')
+    })
 
     experienceSubTitle.forEach((e) => {
         e.classList.toggle("dark-theme-font")
@@ -67,3 +90,6 @@ toggleDarkLightMode.onclick = () => {
     })
 
 }
+
+moonIcon.addEventListener('click', toggleDarkLightMode)
+sunIcon.addEventListener('click', toggleDarkLightMode)

@@ -448,19 +448,16 @@ footer p {
 
 /* DARK MODE BUTTON */
 
-.darkmode-icon {
+.fa-moon {
     cursor: pointer;
     color: purple;
 }
 
-.lightmode-icon {
+.fa-sun {
     cursor: pointer;
-    color: yellow;
+    color: orange;
 }
 
-i.lightmode-icon {
-    display: none;
-}
 
 .dark-theme {
     background-color: black;
