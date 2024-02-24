@@ -1,8 +1,8 @@
 function toggleMenu() {
     const menu = document.querySelector(".menu-links")
-    const icon = document.querySelector(".hamburger-icon")
+    const hamburgerIcon = document.querySelector(".hamburger-icon")
     menu.classList.toggle("open")
-    icon.classList.toggle("open")
+    hamburgerIcon.classList.toggle("open")
 }
 
 // DARK MODE
@@ -20,7 +20,11 @@ const logo = document.querySelectorAll('.logo');
 const moonIcon = document.querySelector('.fa-moon');
 const sunIcon = document.querySelector('.fa-sun');
 
-sunIcon.style.display = 'none'
+const hamburgerDarkMode = document.querySelector('.hamburger-darkmode');
+const hamburgerLightMode = document.querySelector('.hamburger-lightmode');
+
+sunIcon.style.display = 'none';
+hamburgerLightMode.style.display = 'none';
 
 let hideIcon = false;
 
@@ -42,14 +46,17 @@ const toggleDarkLightMode = () => {
         hamburgerIcon.forEach((e) => {
             e.style.backgroundColor = 'white'
         })
+        hamburgerDarkMode.style.display = 'none';
+        hamburgerLightMode.style.display = 'inline-block'
     } else {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline-block'
         hamburgerIcon.forEach((e) => {
             e.style.backgroundColor = 'black'
         })
+        hamburgerDarkMode.style.display = 'inline-block';
+        hamburgerLightMode.style.display = 'none'
     }
-
 
     // We use forEach since the a is set to querySelectorAll
 
@@ -93,3 +100,6 @@ const toggleDarkLightMode = () => {
 
 moonIcon.addEventListener('click', toggleDarkLightMode)
 sunIcon.addEventListener('click', toggleDarkLightMode)
+
+hamburgerDarkMode.addEventListener('click', toggleDarkLightMode)
+hamburgerLightMode.addEventListener('click', toggleDarkLightMode)
