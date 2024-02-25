@@ -476,3 +476,46 @@ footer p {
 .dark-theme-font {
     color: white;
 }
+
+/* LANGUAGE ICONS */
+
+.fa-react {
+    cursor: default;
+    color: aqua;
+}
+
+.fa-html5 {
+    cursor: default;
+    color: orangered;
+}
+
+.fa-css3-alt {
+    cursor: default;
+    color: blue;
+}
+
+.fa-js {
+    cursor: default;
+    color: orange;
+}
+
+.firebase-img {
+    height: 1.75rem;
+    width: auto;
+}
+
+.language-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 8vw;
+}
