@@ -95,6 +95,7 @@ const toggleDarkLightMode = () => {
     h3.forEach((e) => {
         e.classList.toggle("dark-theme-font")
     })
+    
 
 }
 

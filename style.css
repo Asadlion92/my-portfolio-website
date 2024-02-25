@@ -453,9 +453,19 @@ footer p {
     color: purple;
 }
 
+.fa-moon:hover {
+    color: gray;
+    transition: all 500ms ease;
+}
+
 .fa-sun {
     cursor: pointer;
     color: orange;
+}
+
+.fa-sun:hover {
+    color: yellow;
+    transition: all 500ms ease;
 }
 
 
