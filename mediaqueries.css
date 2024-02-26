@@ -42,6 +42,9 @@
     .about-containers {
         margin-top: 0;
     }
+    i.arrow {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -100,5 +103,8 @@
     }
     .text-container {
         text-align: justify;
+    }
+    i.arrow {
+        display: none;
     }
 }

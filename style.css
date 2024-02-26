@@ -223,6 +223,12 @@ section {
     font-size: 1.75rem;
 }
 
+.fa-linkedin:hover, .fa-github:hover, .fa-angles-down:hover {
+    color: red;
+    transition: all 500ms ease;
+}
+
+
 /* BUTTONS */
 
 .btn-container {
